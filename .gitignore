@@ -2,3 +2,6 @@ _ReSharper.TicketSystem/	# Abaikan semua file dalam folder _ReSharper.TicketSyst
 *.sln						# Abaikan semua ekstensi sln
 *.csproj					# Abaikan semua ekstensi csproj
 *.csproj.user				# Abaikan semua ekstensi csproj.user
+*.exe						# Abaikan semua ekstensi exe
+*.pdb						# Abaikan semua ekstensi pdb
+*.log						# Abaikan semua ekstensi log
