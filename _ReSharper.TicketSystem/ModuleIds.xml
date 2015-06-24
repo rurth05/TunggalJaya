@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="D7330587-0E9F-450B-89D3-001F2CC99661" ModuleId="TicketSystem" />
+  <Module PersistentId="25150F0E-5186-41E7-B7F4-6F790E0CB0C5" ModuleId="TJ.DAL" />
+  <Module PersistentId="084C9CCC-A93E-4D4A-BE7D-AD4DFFD9C032" ModuleId="LicenseGenerator" />
+</Modules>

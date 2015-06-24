@@ -1,0 +1,6 @@
+D:\MyWorkspace\PO_TJ\TicketSystem\TJ.DAL\bin\Debug\TJ.DAL.dll.config
+D:\MyWorkspace\PO_TJ\TicketSystem\TJ.DAL\bin\Debug\TJ.DAL.dll
+D:\MyWorkspace\PO_TJ\TicketSystem\TJ.DAL\bin\Debug\TJ.DAL.pdb
+D:\MyWorkspace\PO_TJ\TicketSystem\TJ.DAL\obj\Debug\TJ.DAL.csprojResolveAssemblyReference.cache
+D:\MyWorkspace\PO_TJ\TicketSystem\TJ.DAL\obj\Debug\TJ.DAL.dll
+D:\MyWorkspace\PO_TJ\TicketSystem\TJ.DAL\obj\Debug\TJ.DAL.pdb

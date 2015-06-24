@@ -1,0 +1,7 @@
+D:\MyWorkspace\PO_TJ\TicketSystem\LicenseGenerator\bin\Debug\LicenseGenerator.exe
+D:\MyWorkspace\PO_TJ\TicketSystem\LicenseGenerator\bin\Debug\LicenseGenerator.pdb
+D:\MyWorkspace\PO_TJ\TicketSystem\LicenseGenerator\obj\x86\Debug\LicenseGenerator.Form1.resources
+D:\MyWorkspace\PO_TJ\TicketSystem\LicenseGenerator\obj\x86\Debug\LicenseGenerator.Properties.Resources.resources
+D:\MyWorkspace\PO_TJ\TicketSystem\LicenseGenerator\obj\x86\Debug\LicenseGenerator.csproj.GenerateResource.Cache
+D:\MyWorkspace\PO_TJ\TicketSystem\LicenseGenerator\obj\x86\Debug\LicenseGenerator.exe
+D:\MyWorkspace\PO_TJ\TicketSystem\LicenseGenerator\obj\x86\Debug\LicenseGenerator.pdb

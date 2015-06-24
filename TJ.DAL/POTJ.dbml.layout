@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 21.5" name="POTJ">
+  <DataContextMoniker Name="/POTJDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0955d01d-bbd9-4f4b-99c7-8a0d0452de16" absoluteBounds="9, 1, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/POTJDataContext/TRX_PENJUALAN_DETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c83d804-ac9c-49a3-9f4a-1f82e34bc239" absoluteBounds="9.015, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b610cf3-4863-4c9a-b737-27de84b0bf62" absoluteBounds="0.75, 19.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/POTJDataContext/ADM_JENIS_IDENTITAS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2885e4d1-d902-415e-aaa4-03f8af9b203a" absoluteBounds="0.765, 20.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed9aa440-015b-4a3b-bf7f-99043c0d4366" absoluteBounds="3.5, 19.25, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/POTJDataContext/ADM_KONSUMEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="492817b2-3b1d-4208-a6ac-460cb7f77063" absoluteBounds="3.515, 19.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b67a423-4363-4d0d-9ad9-da6bb7660035" absoluteBounds="9.75, 6.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/POTJDataContext/ADM_TARIF" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16fef0ef-3627-4a2f-b7d5-3e4edff34fad" absoluteBounds="9.765, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e648b04-50c4-479b-8861-ab0b8d8d7c9b" absoluteBounds="1.5, 16.5, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/POTJDataContext/REF_INDEX_GAJI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a97dbbac-a3d4-4522-9979-704cb9a2370c" absoluteBounds="1.5150000000000001, 16.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="797fefc2-85ad-4ee2-96f1-50cfd0f47605" absoluteBounds="0.75, 7.625, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/POTJDataContext/REF_KENDARAAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6ceeb27-55e0-40cf-849e-ef6fd387b3cf" absoluteBounds="0.765, 8.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98f727b5-79f6-489a-84dd-f25dbb365057" absoluteBounds="0.75, 2.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/POTJDataContext/REF_KOTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2494c9d6-9d3c-4cab-8206-eda2cd2d99e1" absoluteBounds="0.765, 3.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dcdd2d3f-a109-4f35-8929-9c6333454da2" absoluteBounds="3.75, 7.375, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/POTJDataContext/REF_PERAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59f05d37-579c-4afa-a23d-1951e881a7ec" absoluteBounds="3.765, 7.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4e0578e-37d3-4cbb-ada5-ff1a30bc0210" absoluteBounds="0.75, 5.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/POTJDataContext/REF_STATUS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8c99d48-5249-487c-b4bd-b7519ba9a6b1" absoluteBounds="0.765, 5.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d15a77b-ebf4-499f-aafb-26045eb2c57a" absoluteBounds="1.5, 10.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/POTJDataContext/REF_TIPE_KENDARAAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d982282-01d4-4896-ab21-9d1398d647ca" absoluteBounds="1.5150000000000001, 11.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.125 : 10.625); (2.125 : 9.39589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/POTJDataContext/REF_TIPE_KENDARAAN/REF_TIPE_KENDARAAN_REF_KENDARAAN" />
+      <nodes>
+        <classShapeMoniker Id="4d15a77b-ebf4-499f-aafb-26045eb2c57a" />
+        <classShapeMoniker Id="797fefc2-85ad-4ee2-96f1-50cfd0f47605" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 20.3181469726563); (3.5 : 20.3181469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/POTJDataContext/ADM_JENIS_IDENTITAS/ADM_JENIS_IDENTITAS_ADM_KONSUMEN" />
+      <nodes>
+        <classShapeMoniker Id="9b610cf3-4863-4c9a-b737-27de84b0bf62" />
+        <classShapeMoniker Id="ed9aa440-015b-4a3b-bf7f-99043c0d4366" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0294319a-9d80-4935-84ce-107ba607f569" absoluteBounds="9, 10.375, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/POTJDataContext/TRX_HISTORI_TRANSAKSI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="942ef0e6-a3d3-4ff6-b1bd-a81b6ddfee82" absoluteBounds="9.015, 10.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72dab74f-5c55-4962-ac5b-9362a747930c" absoluteBounds="5.875, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/POTJDataContext/TRX_PENDAPATAN_DATANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0de012ca-7e8d-495e-b049-750168778718" absoluteBounds="5.89, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dcf33729-be69-406e-9232-e6eeb73faa52" absoluteBounds="1.25, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/POTJDataContext/ADM_KOMISI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b3be677-a092-4d2f-ac6f-92547fa10dfe" absoluteBounds="1.2650000000000001, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e99cbbc2-d3d8-4170-a500-60a42dfced33" absoluteBounds="6.75, 8, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/POTJDataContext/REF_PENGGUNA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5505e4ba-8584-42fd-bd56-a1d832db248c" absoluteBounds="6.765, 8.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 8.38064697265625); (5.91666666666667 : 8.38064697265625 : JumpStart); (6.33333333333333 : 8.38064697265625 : JumpEnd); (6.75 : 8.38064697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/POTJDataContext/REF_PERAN/REF_PERAN_REF_PENGGUNA" />
+      <nodes>
+        <classShapeMoniker Id="dcdd2d3f-a109-4f35-8929-9c6333454da2" />
+        <classShapeMoniker Id="e99cbbc2-d3d8-4170-a500-60a42dfced33" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5d41a3cf-7a56-40b4-9247-595e2e570be7" absoluteBounds="5.75, 4.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/POTJDataContext/TRX_PENGELUARAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81baca90-058b-40ea-a70a-672c078ffb85" absoluteBounds="5.765, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a5512a02-e4be-49ef-b655-94dbd570e51a" absoluteBounds="6.625, 11.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/POTJDataContext/TRX_PENJUALAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3eaf54c-d88f-499b-b0a8-214ef1ee4680" absoluteBounds="6.64, 12.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.625 : 13.2123527018229); (8.9375 : 13.2123527018229); (8.9375 : 2.67234537760417); (10 : 2.67234537760417); (10 : 2.57859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/POTJDataContext/TRX_PENJUALAN/TRX_PENJUALAN_TRX_PENJUALAN_DETAIL" />
+      <nodes>
+        <classShapeMoniker Id="a5512a02-e4be-49ef-b655-94dbd570e51a" />
+        <classShapeMoniker Id="0955d01d-bbd9-4f4b-99c7-8a0d0452de16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.625 : 12.2364005533854); (9 : 12.2364005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/POTJDataContext/TRX_PENJUALAN/TRX_PENJUALAN_TRX_HISTORI_TRANSAKSI" />
+      <nodes>
+        <classShapeMoniker Id="a5512a02-e4be-49ef-b655-94dbd570e51a" />
+        <classShapeMoniker Id="0294319a-9d80-4935-84ce-107ba607f569" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.25 : 1.8862939453125); (2.25 : 2.375); (3 : 2.375); (3 : 10.375); (3.75 : 10.375); (3.75 : 13.2123527018229); (6.04166666666667 : 13.2123527018229 : JumpStart); (6.33333333333333 : 13.2123527018229 : JumpEnd); (6.625 : 13.2123527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/ADM_KOMISI/ADM_KOMISI_TRX_PENJUALAN" />
+      <nodes>
+        <classShapeMoniker Id="dcf33729-be69-406e-9232-e6eeb73faa52" />
+        <classShapeMoniker Id="a5512a02-e4be-49ef-b655-94dbd570e51a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 20.2315991210938); (7.625 : 20.2315991210938); (7.625 : 14.6747054036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/ADM_KONSUMEN/ADM_KONSUMEN_TRX_PENJUALAN" />
+      <nodes>
+        <classShapeMoniker Id="ed9aa440-015b-4a3b-bf7f-99043c0d4366" />
+        <classShapeMoniker Id="a5512a02-e4be-49ef-b655-94dbd570e51a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b346e3b0-07e7-4a77-b527-480bd1fad22e" absoluteBounds="1.5, 13.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/POTJDataContext/REF_SUPIR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72096ee5-3e70-4cb4-89d6-477901615d5a" absoluteBounds="1.5150000000000001, 14.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1fe7179b-5a10-4811-8c17-2676abce7469" absoluteBounds="4.375, 2.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/POTJDataContext/ADM_JADWAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36dbecc7-cb73-4da9-9fd8-98d4b8cf3ea8" absoluteBounds="4.39, 3.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.125 : 2.75); (6.125 : 2.5112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/ADM_JADWAL/ADM_JADWAL_TRX_PENDAPATAN_DATANG" />
+      <nodes>
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+        <classShapeMoniker Id="72dab74f-5c55-4962-ac5b-9362a747930c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.67961538461539 : 5.48240397135417); (5.67961538461539 : 6.95359537760417); (6.04166666666667 : 6.95359537760417 : JumpStart); (6.33333333333333 : 6.95359537760417 : JumpEnd); (6.75 : 6.95359537760417); (6.75 : 6.32859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/POTJDataContext/ADM_JADWAL/ADM_JADWAL_TRX_PENGELUARAN" />
+      <nodes>
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+        <classShapeMoniker Id="5d41a3cf-7a56-40b4-9247-595e2e570be7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.0312505 : 5.48240397135417); (5.0312505 : 7.125); (6 : 7.125); (6 : 12.4499243509115); (6.04166666666667 : 12.4499243509115 : JumpStart); (6.33333333333333 : 12.4499243509115 : JumpEnd); (6.625 : 12.4499243509115)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/ADM_JADWAL/ADM_JADWAL_TRX_PENJUALAN" />
+      <nodes>
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+        <classShapeMoniker Id="a5512a02-e4be-49ef-b655-94dbd570e51a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.48484537760417); (2.91666666666667 : 6.48484537760417 : JumpStart); (3.08333333333333 : 6.48484537760417 : JumpEnd); (3.29166666666667 : 6.48484537760417 : JumpStart); (3.45833333333333 : 6.48484537760417 : JumpEnd); (4.67187275 : 6.48484537760417); (4.67187275 : 5.48240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/REF_STATUS/REF_STATUS_ADM_JADWAL" />
+      <nodes>
+        <classShapeMoniker Id="d4e0578e-37d3-4cbb-ada5-ff1a30bc0210" />
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 17.0969962565104); (6.25 : 17.0969962565104); (6.25 : 6.57859537760417); (5.76294871794872 : 6.57859537760417 : JumpStart); (5.59628205128205 : 6.57859537760417 : JumpEnd); (5.39062775 : 6.57859537760417); (5.39062775 : 5.48240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/REF_INDEX_GAJI/REF_INDEX_GAJI_ADM_JADWAL" />
+      <nodes>
+        <classShapeMoniker Id="8e648b04-50c4-479b-8861-ab0b8d8d7c9b" />
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.625); (2.94107443490112 : 7.43392556509888 : JumpStart); (3.05892556509888 : 7.31607443490112 : JumpEnd); (3.375 : 7); (3.375 : 4.11620198567708); (4.375 : 4.11620198567708)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/REF_KENDARAAN/REF_KENDARAAN_ADM_JADWAL" />
+      <nodes>
+        <classShapeMoniker Id="797fefc2-85ad-4ee2-96f1-50cfd0f47605" />
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.38064697265625); (2.91666666666667 : 3.38064697265625 : JumpStart); (3.08333333333333 : 3.38064697265625 : JumpEnd); (4.375 : 3.38064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/REF_KOTA/REF_KOTA_ADM_JADWAL" />
+      <nodes>
+        <classShapeMoniker Id="98f727b5-79f6-489a-84dd-f25dbb365057" />
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.00282348632813); (2.91666666666667 : 3.00282348632812 : JumpStart); (3.08333333333333 : 3.00282348632813 : JumpEnd); (4.375 : 3.00282348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/REF_KOTA/REF_KOTA_ADM_JADWAL1" />
+      <nodes>
+        <classShapeMoniker Id="98f727b5-79f6-489a-84dd-f25dbb365057" />
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 14.7604484049479); (6.125 : 14.7604484049479); (6.125 : 6.82859537760417); (5.76294871794872 : 6.82859537760417 : JumpStart); (5.59628205128205 : 6.82859537760417 : JumpEnd); (5.11458383333333 : 6.82859537760417 : JumpStart); (4.94791716666667 : 6.82859537760417 : JumpEnd); (4.851561625 : 6.82859537760417); (4.851561625 : 5.48240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/POTJDataContext/REF_SUPIR/REF_SUPIR_ADM_JADWAL" />
+      <nodes>
+        <classShapeMoniker Id="b346e3b0-07e7-4a77-b527-480bd1fad22e" />
+        <classShapeMoniker Id="1fe7179b-5a10-4811-8c17-2676abce7469" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

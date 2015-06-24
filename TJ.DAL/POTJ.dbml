@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tj_db" Class="POTJDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=tj_db;Persist Security Info=True;User ID=sa" SettingsObjectName="TJ.DAL.Properties.Settings" SettingsPropertyName="tj_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TRX_PENJUALAN_DETAIL" Member="TRX_PENJUALAN_DETAILs">
+    <Type Name="TRX_PENJUALAN_DETAIL">
+      <Column Name="ID_PENJUALAN_DETAIL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PENJUALAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NO_KURSI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NAMA_PENUMPANG" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="TRX_PENJUALAN_TRX_PENJUALAN_DETAIL" Member="TRX_PENJUALAN" ThisKey="ID_PENJUALAN" OtherKey="ID_PENJUALAN" Type="TRX_PENJUALAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ADM_JENIS_IDENTITAS" Member="ADM_JENIS_IDENTITAS">
+    <Type Name="ADM_JENIS_IDENTITAS">
+      <Column Name="ID_JENIS_IDENTITAS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KODE" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="JENIS_IDENTITAS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ADM_JENIS_IDENTITAS_ADM_KONSUMEN" Member="ADM_KONSUMENs" ThisKey="ID_JENIS_IDENTITAS" OtherKey="ID_JENIS_IDENTITAS" Type="ADM_KONSUMEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ADM_KONSUMEN" Member="ADM_KONSUMENs">
+    <Type Name="ADM_KONSUMEN">
+      <Column Name="ID_KONSUMEN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_JENIS_IDENTITAS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NO_IDENTITAS" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ALAMAT" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TELP" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Association Name="ADM_KONSUMEN_TRX_PENJUALAN" Member="TRX_PENJUALANs" ThisKey="ID_KONSUMEN" OtherKey="ID_KONSUMEN" Type="TRX_PENJUALAN" />
+      <Association Name="ADM_JENIS_IDENTITAS_ADM_KONSUMEN" Member="ADM_JENIS_IDENTITAS" Storage="_ADM_JENIS_IDENTITA" ThisKey="ID_JENIS_IDENTITAS" OtherKey="ID_JENIS_IDENTITAS" Type="ADM_JENIS_IDENTITAS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ADM_TARIF" Member="ADM_TARIFs">
+    <Type Name="ADM_TARIF">
+      <Column Name="ID_TARIF" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GOLONGAN" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="TARIF" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF_INDEX_GAJI" Member="REF_INDEX_GAJIs">
+    <Type Name="REF_INDEX_GAJI">
+      <Column Name="ID_INDEX_GAJI" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="INDEX_GAJI" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="REF_INDEX_GAJI_ADM_JADWAL" Member="ADM_JADWALs" ThisKey="ID_INDEX_GAJI" OtherKey="ID_INDEX_GAJI" Type="ADM_JADWAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF_KENDARAAN" Member="REF_KENDARAANs">
+    <Type Name="REF_KENDARAAN">
+      <Column Name="ID_KENDARAAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NO_ARMADA" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="NO_POLISI" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="JML_KURSI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_TIPE_KENDARAAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="REF_KENDARAAN_ADM_JADWAL" Member="ADM_JADWALs" ThisKey="ID_KENDARAAN" OtherKey="ID_KENDARAAN" Type="ADM_JADWAL" />
+      <Association Name="REF_TIPE_KENDARAAN_REF_KENDARAAN" Member="REF_TIPE_KENDARAAN" ThisKey="ID_TIPE_KENDARAAN" OtherKey="ID_TIPE_KENDARAAN" Type="REF_TIPE_KENDARAAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF_KOTA" Member="REF_KOTAs">
+    <Type Name="REF_KOTA">
+      <Column Name="ID_KOTA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KODE_KOTA" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="NAMA_KOTA" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="REF_KOTA_ADM_JADWAL" Member="ADM_JADWALs" ThisKey="ID_KOTA" OtherKey="KOTA_ASAL" Type="ADM_JADWAL" />
+      <Association Name="REF_KOTA_ADM_JADWAL1" Member="ADM_JADWALs1" ThisKey="ID_KOTA" OtherKey="KOTA_TUJUAN" Type="ADM_JADWAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF_PERAN" Member="REF_PERANs">
+    <Type Name="REF_PERAN">
+      <Column Name="ID_PERAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KODE_PERAN" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="PERAN" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="REF_PERAN_REF_PENGGUNA" Member="REF_PENGGUNAs" ThisKey="ID_PERAN" OtherKey="ID_PERAN" Type="REF_PENGGUNA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF_STATUS" Member="REF_STATUS">
+    <Type Name="REF_STATUS">
+      <Column Name="ID_STATUS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KODE_STATUS" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="REF_STATUS_ADM_JADWAL" Member="ADM_JADWALs" ThisKey="ID_STATUS" OtherKey="ID_STATUS" Type="ADM_JADWAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF_TIPE_KENDARAAN" Member="REF_TIPE_KENDARAANs">
+    <Type Name="REF_TIPE_KENDARAAN">
+      <Column Name="ID_TIPE_KENDARAAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KODE_TIPE" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="TIPE_KENDARAAN" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="KAS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SETOR_WAJIB" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="REF_TIPE_KENDARAAN_REF_KENDARAAN" Member="REF_KENDARAANs" ThisKey="ID_TIPE_KENDARAAN" OtherKey="ID_TIPE_KENDARAAN" Type="REF_KENDARAAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRX_HISTORI_TRANSAKSI" Member="TRX_HISTORI_TRANSAKSIs">
+    <Type Name="TRX_HISTORI_TRANSAKSI">
+      <Column Name="ID_TRANSAKSI" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NO_TRANSAKSI" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TGL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="JML_TAGIH" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DIBAYAR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SISA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ID_PENJUALAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="INFO" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Association Name="TRX_PENJUALAN_TRX_HISTORI_TRANSAKSI" Member="TRX_PENJUALAN" ThisKey="ID_PENJUALAN" OtherKey="ID_PENJUALAN" Type="TRX_PENJUALAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRX_PENDAPATAN_DATANG" Member="TRX_PENDAPATAN_DATANGs">
+    <Type Name="TRX_PENDAPATAN_DATANG">
+      <Column Name="ID_PENDAPATAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_JADWAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PENDAPATAN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="ADM_JADWAL_TRX_PENDAPATAN_DATANG" Member="ADM_JADWAL" ThisKey="ID_JADWAL" OtherKey="ID_JADWAL" Type="ADM_JADWAL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ADM_KOMISI" Member="ADM_KOMISIs">
+    <Type Name="ADM_KOMISI">
+      <Column Name="ID_KOMISI" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KODE_KOMISI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="KOMISI" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="ADM_KOMISI_TRX_PENJUALAN" Member="TRX_PENJUALANs" ThisKey="ID_KOMISI" OtherKey="ID_KOMISI" Type="TRX_PENJUALAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF_PENGGUNA" Member="REF_PENGGUNAs">
+    <Type Name="REF_PENGGUNA">
+      <Column Name="ID_PENGGUNA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAMA_PENGGUNA" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SANDI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NAMA_LENGKAP" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ALAMAT" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TELP" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ID_PERAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="REF_PERAN_REF_PENGGUNA" Member="REF_PERAN" ThisKey="ID_PERAN" OtherKey="ID_PERAN" Type="REF_PERAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRX_PENGELUARAN" Member="TRX_PENGELUARANs">
+    <Type Name="TRX_PENGELUARAN">
+      <Column Name="ID_PENGELUARAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_JADWAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PENGELUARAN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="KETERANGAN" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="ADM_JADWAL_TRX_PENGELUARAN" Member="ADM_JADWAL" ThisKey="ID_JADWAL" OtherKey="ID_JADWAL" Type="ADM_JADWAL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRX_PENJUALAN" Member="TRX_PENJUALANs">
+    <Type Name="TRX_PENJUALAN">
+      <Column Name="ID_PENJUALAN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TGL_PENJUALAN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ID_KONSUMEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_JADWAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QTY_PENUMPANG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ONGKOS" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="JUMLAH" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DP" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SISA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ID_KOMISI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TRX_PENJUALAN_TRX_PENJUALAN_DETAIL" Member="TRX_PENJUALAN_DETAILs" ThisKey="ID_PENJUALAN" OtherKey="ID_PENJUALAN" Type="TRX_PENJUALAN_DETAIL" />
+      <Association Name="TRX_PENJUALAN_TRX_HISTORI_TRANSAKSI" Member="TRX_HISTORI_TRANSAKSIs" ThisKey="ID_PENJUALAN" OtherKey="ID_PENJUALAN" Type="TRX_HISTORI_TRANSAKSI" />
+      <Association Name="ADM_KOMISI_TRX_PENJUALAN" Member="ADM_KOMISI" ThisKey="ID_KOMISI" OtherKey="ID_KOMISI" Type="ADM_KOMISI" IsForeignKey="true" />
+      <Association Name="ADM_KONSUMEN_TRX_PENJUALAN" Member="ADM_KONSUMEN" ThisKey="ID_KONSUMEN" OtherKey="ID_KONSUMEN" Type="ADM_KONSUMEN" IsForeignKey="true" />
+      <Association Name="ADM_JADWAL_TRX_PENJUALAN" Member="ADM_JADWAL" ThisKey="ID_JADWAL" OtherKey="ID_JADWAL" Type="ADM_JADWAL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF_SUPIR" Member="REF_SUPIRs">
+    <Type Name="REF_SUPIR">
+      <Column Name="ID_SUPIR" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ALAMAT" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TELP" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="NO_SIM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="REF_SUPIR_ADM_JADWAL" Member="ADM_JADWALs" ThisKey="ID_SUPIR" OtherKey="ID_SUPIR" Type="ADM_JADWAL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ADM_JADWAL" Member="ADM_JADWALs">
+    <Type Name="ADM_JADWAL">
+      <Column Name="ID_JADWAL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TGL_BERANGKAT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="JAM" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="KOTA_ASAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KOTA_TUJUAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_KENDARAAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_SUPIR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARTER" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_INDEX_GAJI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ADM_JADWAL_TRX_PENDAPATAN_DATANG" Member="TRX_PENDAPATAN_DATANGs" ThisKey="ID_JADWAL" OtherKey="ID_JADWAL" Type="TRX_PENDAPATAN_DATANG" />
+      <Association Name="ADM_JADWAL_TRX_PENGELUARAN" Member="TRX_PENGELUARANs" ThisKey="ID_JADWAL" OtherKey="ID_JADWAL" Type="TRX_PENGELUARAN" />
+      <Association Name="ADM_JADWAL_TRX_PENJUALAN" Member="TRX_PENJUALANs" ThisKey="ID_JADWAL" OtherKey="ID_JADWAL" Type="TRX_PENJUALAN" />
+      <Association Name="REF_STATUS_ADM_JADWAL" Member="REF_STATUS" ThisKey="ID_STATUS" OtherKey="ID_STATUS" Type="REF_STATUS" IsForeignKey="true" />
+      <Association Name="REF_INDEX_GAJI_ADM_JADWAL" Member="REF_INDEX_GAJI" ThisKey="ID_INDEX_GAJI" OtherKey="ID_INDEX_GAJI" Type="REF_INDEX_GAJI" IsForeignKey="true" />
+      <Association Name="REF_KENDARAAN_ADM_JADWAL" Member="REF_KENDARAAN" ThisKey="ID_KENDARAAN" OtherKey="ID_KENDARAAN" Type="REF_KENDARAAN" IsForeignKey="true" />
+      <Association Name="REF_KOTA_ADM_JADWAL" Member="REF_KOTA" ThisKey="KOTA_ASAL" OtherKey="ID_KOTA" Type="REF_KOTA" IsForeignKey="true" />
+      <Association Name="REF_KOTA_ADM_JADWAL1" Member="REF_KOTA1" ThisKey="KOTA_TUJUAN" OtherKey="ID_KOTA" Type="REF_KOTA" IsForeignKey="true" />
+      <Association Name="REF_SUPIR_ADM_JADWAL" Member="REF_SUPIR" ThisKey="ID_SUPIR" OtherKey="ID_SUPIR" Type="REF_SUPIR" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

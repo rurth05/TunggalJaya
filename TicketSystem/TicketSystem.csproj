@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7330587-0E9F-450B-89D3-001F2CC99661}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TicketSystem</RootNamespace>
+    <AssemblyName>TicketSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Ticket.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About\FrTentang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About\FrTentang.Designer.cs">
+      <DependentUpon>FrTentang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\FrJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\FrJadwal.Designer.cs">
+      <DependentUpon>FrJadwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\FrJenisIdentitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\FrJenisIdentitas.Designer.cs">
+      <DependentUpon>FrJenisIdentitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\FrKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\FrKonsumen.Designer.cs">
+      <DependentUpon>FrKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\FrMasterAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\FrMasterAdm.Designer.cs">
+      <DependentUpon>FrMasterAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrations\FrTarif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrations\FrTarif.Designer.cs">
+      <DependentUpon>FrTarif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DbConnection.cs" />
+    <Compile Include="Common\Encryption.cs" />
+    <Compile Include="Common\UserInfo.cs" />
+    <Compile Include="Common\Validasi.cs" />
+    <Compile Include="dsLapPemberangkatan.cs">
+      <DependentUpon>dsLapPemberangkatan.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsLapPemberangkatan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLapPemberangkatan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsManifest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsManifest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsReceipt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReceipt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrUtama.Designer.cs">
+      <DependentUpon>FrUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Driver\FrIndexGaji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Driver\FrIndexGaji.Designer.cs">
+      <DependentUpon>FrIndexGaji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Driver\FrMasterSupir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Driver\FrMasterSupir.Designer.cs">
+      <DependentUpon>FrMasterSupir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Users\FrMasterPengguna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Users\FrMasterPengguna.Designer.cs">
+      <DependentUpon>FrMasterPengguna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrKendaraan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrKendaraan.Designer.cs">
+      <DependentUpon>FrKendaraan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrKota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrKota.Designer.cs">
+      <DependentUpon>FrKota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrMasterKendaraan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrMasterKendaraan.Designer.cs">
+      <DependentUpon>FrMasterKendaraan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Driver\FrSupir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Driver\FrSupir.Designer.cs">
+      <DependentUpon>FrSupir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrStatusKendaraan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrStatusKendaraan.Designer.cs">
+      <DependentUpon>FrStatusKendaraan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrTipeKendaraan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Vehicles\FrTipeKendaraan.Designer.cs">
+      <DependentUpon>FrTipeKendaraan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Users\FrPengguna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Users\FrPengguna.Designer.cs">
+      <DependentUpon>FrPengguna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\Users\FrPeran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\Users\FrPeran.Designer.cs">
+      <DependentUpon>FrPeran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\FrPrintManifest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrPrintManifest.Designer.cs">
+      <DependentUpon>FrPrintManifest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrLapPemberangkatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrLapPemberangkatan.Designer.cs">
+      <DependentUpon>FrLapPemberangkatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPelunasan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPelunasan.Designer.cs">
+      <DependentUpon>FrPelunasan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPelunasanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPelunasanAdd.Designer.cs">
+      <DependentUpon>FrPelunasanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPembatalan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPembatalan.Designer.cs">
+      <DependentUpon>FrPembatalan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPembatalanAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPembatalanAdd.Designer.cs">
+      <DependentUpon>FrPembatalanAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPendapatanDatang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPendapatanDatang.Designer.cs">
+      <DependentUpon>FrPendapatanDatang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPendapatanDatangAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPendapatanDatangAdd.Designer.cs">
+      <DependentUpon>FrPendapatanDatangAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPengeluaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPengeluaran.Designer.cs">
+      <DependentUpon>FrPengeluaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPengeluaranAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPengeluaranAdd.Designer.cs">
+      <DependentUpon>FrPengeluaranAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrPrintReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrPrintReceipt.Designer.cs">
+      <DependentUpon>FrPrintReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\FrTrx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions\FrTrx.Designer.cs">
+      <DependentUpon>FrTrx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FrGantiSandi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FrGantiSandi.Designer.cs">
+      <DependentUpon>FrGantiSandi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FrLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FrLogin.Designer.cs">
+      <DependentUpon>FrLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About\FrTentang.resx">
+      <DependentUpon>FrTentang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\FrJadwal.resx">
+      <DependentUpon>FrJadwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\FrJenisIdentitas.resx">
+      <DependentUpon>FrJenisIdentitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\FrKonsumen.resx">
+      <DependentUpon>FrKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\FrMasterAdm.resx">
+      <DependentUpon>FrMasterAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrations\FrTarif.resx">
+      <DependentUpon>FrTarif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrUtama.resx">
+      <DependentUpon>FrUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Driver\FrIndexGaji.resx">
+      <DependentUpon>FrIndexGaji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Driver\FrMasterSupir.resx">
+      <DependentUpon>FrMasterSupir.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Users\FrMasterPengguna.resx">
+      <DependentUpon>FrMasterPengguna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Users\FrPeran.resx">
+      <DependentUpon>FrPeran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Vehicles\FrKendaraan.resx">
+      <DependentUpon>FrKendaraan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Vehicles\FrKota.resx">
+      <DependentUpon>FrKota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Vehicles\FrMasterKendaraan.resx">
+      <DependentUpon>FrMasterKendaraan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Driver\FrSupir.resx">
+      <DependentUpon>FrSupir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Vehicles\FrStatusKendaraan.resx">
+      <DependentUpon>FrStatusKendaraan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Vehicles\FrTipeKendaraan.resx">
+      <DependentUpon>FrTipeKendaraan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\Users\FrPengguna.resx">
+      <DependentUpon>FrPengguna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\FrPrintManifest.resx">
+      <DependentUpon>FrPrintManifest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrLapPemberangkatan.resx">
+      <DependentUpon>FrLapPemberangkatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportTemplates\Manifest1.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTemplates\Manifest.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTemplates\Pemberangkatan.rdlc" />
+    <EmbeddedResource Include="Transactions\FrPelunasan.resx">
+      <DependentUpon>FrPelunasan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrPelunasanAdd.resx">
+      <DependentUpon>FrPelunasanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrPembatalan.resx">
+      <DependentUpon>FrPembatalan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrPembatalanAdd.resx">
+      <DependentUpon>FrPembatalanAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrPendapatanDatang.resx">
+      <DependentUpon>FrPendapatanDatang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrPendapatanDatangAdd.resx">
+      <DependentUpon>FrPendapatanDatangAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrPengeluaran.resx">
+      <DependentUpon>FrPengeluaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrPengeluaranAdd.resx">
+      <DependentUpon>FrPengeluaranAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrPrintReceipt.resx">
+      <DependentUpon>FrPrintReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\FrTrx.resx">
+      <DependentUpon>FrTrx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions\ReportTemplates\Kwitansi.rdlc" />
+    <EmbeddedResource Include="Transactions\ReportTemplates\KwitansiCarter.rdlc" />
+    <EmbeddedResource Include="User\FrGantiSandi.resx">
+      <DependentUpon>FrGantiSandi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FrLogin.resx">
+      <DependentUpon>FrLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="dsLapPemberangkatan.xsc">
+      <DependentUpon>dsLapPemberangkatan.xsd</DependentUpon>
+    </None>
+    <None Include="dsLapPemberangkatan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLapPemberangkatan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsLapPemberangkatan.xss">
+      <DependentUpon>dsLapPemberangkatan.xsd</DependentUpon>
+    </None>
+    <None Include="dsManifest.xsc">
+      <DependentUpon>dsManifest.xsd</DependentUpon>
+    </None>
+    <None Include="dsManifest.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsManifest.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsManifest.xss">
+      <DependentUpon>dsManifest.xsd</DependentUpon>
+    </None>
+    <None Include="dsReceipt.xsc">
+      <DependentUpon>dsReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="dsReceipt.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReceipt.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsReceipt.xss">
+      <DependentUpon>dsReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TJ.DAL\TJ.DAL.csproj">
+      <Project>{25150F0E-5186-41E7-B7F4-6F790E0CB0C5}</Project>
+      <Name>TJ.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ticket.ico" />
+    <None Include="Images\Button\Cancel.png" />
+    <Content Include="Images\Button\Ubah.png" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\Menu\Adm.png" />
+    <Content Include="Images\Menu\Files.png" />
+    <Content Include="Images\Menu\Info.png" />
+    <Content Include="Images\Menu\Out.png" />
+    <Content Include="Images\Menu\Report.png" />
+    <Content Include="Images\Menu\Sell.png" />
+    <Content Include="Images\Menu\Setting.png" />
+    <Content Include="Images\Seat.png" />
+    <Content Include="Images\SeatAvailable.png" />
+    <Content Include="Images\SeatUnavailable.png" />
+    <None Include="Resources\Close1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
