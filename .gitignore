@@ -5,3 +5,4 @@ _ReSharper.TicketSystem/	# Abaikan semua file dalam folder _ReSharper.TicketSyst
 *.exe						# Abaikan semua ekstensi exe
 *.pdb						# Abaikan semua ekstensi pdb
 *.log						# Abaikan semua ekstensi log
+*.suo						# Abaikan semua ekstensi suo

@@ -61,7 +61,7 @@ namespace TicketSystem.Maintenance.Driver
                 val.validateTextBox(txtNama, errorProvider1, "Nama harus diisi.");
                 val.validateTextBox(txtAlamat, errorProvider1, "Alamat harus diisi.");
                 val.validateTextBox(txtTelp, errorProvider1, "Telepon harus diisi.");
-                val.validateTextBox(txtNoSIM, errorProvider1, "No SIM harus diisi.");
+                val.validateTextBox(txtNoSIM, errorProvider1, "No. SIM harus diisi.");
 
                 return;
             }
@@ -114,7 +114,7 @@ namespace TicketSystem.Maintenance.Driver
 
         private void txtNoSIM_Validating(object sender, CancelEventArgs e)
         {
-            val.validateTextBox(sender, errorProvider1, "No SIM harus diisi.");
+            val.validateTextBox(sender, errorProvider1, "No. SIM harus diisi.");
         }
 
         private void cbIndexGaji_Validating(object sender, CancelEventArgs e)
